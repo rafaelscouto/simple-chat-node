@@ -6,6 +6,8 @@ body {
   color: #452d3d;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,6 +101,8 @@ ul, li {
 
 #app {
   height: 100vh;
+  max-width: 1600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
