@@ -1,0 +1,252 @@
+@import 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+// font-family: 'Cousine', monospace;
+// font-family: 'Quicksand', sans-serif;
+
+body{
+    background-color: $color_three;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    color: $color_one;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Cousine', monospace;
+}
+
+h1{
+    color: $color_five;
+    font-size: 2.6rem;
+}
+
+h2{
+    color: $color_two;
+    font-size: 2.4rem;
+}
+
+h3{
+    color: $color_four;
+    font-size: 2.2rem;
+}
+
+h4{
+    font-size: 2rem;
+}
+
+h5{
+    font-size: 1.8rem;
+}
+
+h6{
+    font-size: 1.4rem;
+}
+
+a{
+    color: $color_five;
+    transition: 0.3s;
+    text-decoration: none;
+    &:hover{
+        color: $color_two;
+    }
+}
+
+input{
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+::selection {
+    color: $color_three;
+    background: $color_two;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $color_three;
+    background: $color_two;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color_two;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color_two;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color_two;
+}
+
+::-webkit-scrollbar { /* width of the entire scrollbar */
+    width: 12px;
+}
+  
+::-webkit-scrollbar-track { /* color of the tracking area */
+    background: $color_two;
+}
+  
+::-webkit-scrollbar-thumb { /* color of the scroll thumb | roundness of the scroll thumb | creates padding around scroll thumb */
+    background-color: $color_three;
+    border-radius: 0.5rem;
+    border: 3px solid $color_two;
+}
+
+#app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btnSubmit{
+    background-color: $color_two;
+    color: $color_three;
+    &:hover{
+        background-color: $color_five;
+    }
+}
+
+#title, #footer{
+    height: 10vh;
+    text-align: center;
+    background-color: $color_one;
+    color: $color_three;
+    h1{
+        margin: 0;
+        padding: 0.6rem 0;
+        color: $color_three;
+    }
+    a{
+        color: $color_three;
+        font-weight: 700;
+        &:hover{
+            color: $color_two;
+        }
+    }
+}
+
+// login page
+#loginPage{
+    display: none;
+    .formLogin{
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        .loginInput{
+            border: 1px solid $color_two;
+            outline: 0;
+            margin: 0 0 1rem;
+            color: $color_two;
+        }
+    }
+}
+
+// chat page
+#chatPage{
+    display: flex;
+    height: 100vh;
+    .chatArea{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        background-color: #fff;
+        .chatList{
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            max-height: calc(100vh - 38.2vh);
+            background: url('../images/bg.png') center center no-repeat;
+            background-size: contain;
+            li{
+                margin-bottom: 1rem;
+            }
+            .msgStatus{
+                font-size: 1rem;
+                font-style: italic;
+            }
+            .msgText{
+                div{
+                    padding: 0.5rem;
+                    border-radius: 0.25rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .me{
+                    background-color: $color_two;
+                    color: $color_white;
+                }
+                .other{
+                    background-color: $color_three;
+                    .name{
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .userList{
+            width: 20vw;
+            background-color: $color_three;
+            overflow-y: auto;
+            max-height: calc(100vh - 33.1vh);
+            li{
+                padding: 0.5rem 1rem;
+                border-bottom: 1px solid rgba(0,0,0,0.03);
+                // text-transform: capitalize;
+            }
+            .me{
+                color: $color_two;
+                font-weight: 700;
+            }
+        }
+    }
+    .chatAreaText{
+        width: 100%;
+        display: flex;
+    }
+    .chatInputMessage{
+        flex: 1;
+        height: 8vh;
+        padding: 1rem 1.5rem;
+        font-size: 1.6rem;
+        color: $color_two;
+        background-color: $color_three;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+    }
+    .btnSubmit{
+        border-radius: 0;
+    }
+}
+

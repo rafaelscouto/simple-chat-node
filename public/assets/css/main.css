@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+  background-color: #fcfade;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  color: #452d3d;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cousine", monospace;
+}
+
+h1 {
+  color: #548c82;
+  font-size: 2.6rem;
+}
+
+h2 {
+  color: #d55d63;
+  font-size: 2.4rem;
+}
+
+h3 {
+  color: #d1ce95;
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: #548c82;
+  transition: 0.3s;
+  text-decoration: none;
+}
+a:hover {
+  color: #d55d63;
+}
+
+input {
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  color: #fcfade;
+  background: #d55d63;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fcfade;
+  background: #d55d63;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d55d63;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #d55d63;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #d55d63;
+}
+
+::-webkit-scrollbar { /* width of the entire scrollbar */
+  width: 12px;
+}
+
+::-webkit-scrollbar-track { /* color of the tracking area */
+  background: #d55d63;
+}
+
+::-webkit-scrollbar-thumb { /* color of the scroll thumb | roundness of the scroll thumb | creates padding around scroll thumb */
+  background-color: #fcfade;
+  border-radius: 0.5rem;
+  border: 3px solid #d55d63;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btnSubmit {
+  background-color: #d55d63;
+  color: #fcfade;
+}
+.btnSubmit:hover {
+  background-color: #548c82;
+}
+
+#title, #footer {
+  height: 10vh;
+  text-align: center;
+  background-color: #452d3d;
+  color: #fcfade;
+}
+#title h1, #footer h1 {
+  margin: 0;
+  padding: 0.6rem 0;
+  color: #fcfade;
+}
+#title a, #footer a {
+  color: #fcfade;
+  font-weight: 700;
+}
+#title a:hover, #footer a:hover {
+  color: #d55d63;
+}
+
+#loginPage {
+  display: none;
+}
+#loginPage .formLogin {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+}
+#loginPage .formLogin .loginInput {
+  border: 1px solid #d55d63;
+  outline: 0;
+  margin: 0 0 1rem;
+  color: #d55d63;
+}
+
+#chatPage {
+  display: flex;
+  height: 100vh;
+}
+#chatPage .chatArea {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+}
+#chatPage .chatArea .chatList {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 61.8vh;
+  background: url("../images/bg.png") center center no-repeat;
+  background-size: contain;
+}
+#chatPage .chatArea .chatList li {
+  margin-bottom: 1rem;
+}
+#chatPage .chatArea .chatList .msgStatus {
+  font-size: 1rem;
+  font-style: italic;
+}
+#chatPage .chatArea .chatList .msgText div {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+#chatPage .chatArea .chatList .msgText .me {
+  background-color: #d55d63;
+  color: #ffffff;
+}
+#chatPage .chatArea .chatList .msgText .other {
+  background-color: #fcfade;
+}
+#chatPage .chatArea .chatList .msgText .other .name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+#chatPage .chatArea .userList {
+  width: 20vw;
+  background-color: #fcfade;
+  overflow-y: auto;
+  max-height: 66.9vh;
+}
+#chatPage .chatArea .userList li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+#chatPage .chatArea .userList .me {
+  color: #d55d63;
+  font-weight: 700;
+}
+#chatPage .chatAreaText {
+  width: 100%;
+  display: flex;
+}
+#chatPage .chatInputMessage {
+  flex: 1;
+  height: 8vh;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  color: #d55d63;
+  background-color: #fcfade;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+}
+#chatPage .btnSubmit {
+  border-radius: 0;
+}
