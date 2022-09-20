@@ -1,5 +1,5 @@
 <h1 align="center">Chat Simples</h1>
-<h3>simples chat em node com socket.io</h3>
+<h3>Chat simples em node com socket.io</h3>
 <h4>Stack</h4>
 <ul>
 <li>Node</li>
