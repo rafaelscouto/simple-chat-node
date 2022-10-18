@@ -8,12 +8,7 @@
 <li>Gulp</li>
 <li>Sass</li>
 </ul>
-<h4>Requisitos</h4>
+<h4>Instruções</h4>
 <ul>
-<li>npm init</li>
-<li>npm install express</li>
-<li>npm install socket.io</li>
-<li>npm install node-sass</li>
-<li>npm install gulp --save-dev</li>
-<li>npm install sass gulp-sass --save-dev</li>
+<li>node server.js - para rodar o projeto</li>
 </ul>
